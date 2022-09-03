@@ -25,7 +25,9 @@
       And match response.gender == "Male"
       And match response.phone == 4218971348
       And match response == {id:2, name:"Nels", gender:"Male", phone:4218971348}
-
+      * def spartanId = response.id
+      * print "spartan ID = " + spartanId
+      * match spartanId == 2
 
 
 
