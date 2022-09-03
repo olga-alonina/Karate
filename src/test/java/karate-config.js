@@ -6,7 +6,7 @@ function fn() {
   }
   var config = {
     env: env,
-	hello_world_api_url: 'https://sandbox.api.service.nhs.uk/hello-world'
+	hello_world_api_url: 'https://sandbox.api.service.nhs.uk/hello-world/hello/world'
   }
   if (env == 'dev') {
     // customize
