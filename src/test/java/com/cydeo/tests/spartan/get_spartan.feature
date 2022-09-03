@@ -9,5 +9,7 @@
       And path "/spartans"
       When method GET
       Then status 200
-
+      And match header Content-Type == "application/json"
+      And print "hello batch 26 Friends!"
+      And print response
 
