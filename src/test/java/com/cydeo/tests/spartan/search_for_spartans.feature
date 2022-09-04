@@ -22,5 +22,14 @@ Feature: Spartan Rest API: get spartan tests
     And match response.totalElement == 36
     #And first spartan name is Paige
     And match response.content[0].name == "Paige"
+    # contain letter a in response
+    And match response.content[0].name contains "a"
     #And "Lorenza, Nona, Elisabeth" are among the names
-   * def response = {name: 'Lorenza', name: 'Nona', name:'Elisabeth'}
+    * def allNames =  $.content[*].name
+   * print "all names = ", allNames
+    And match response.content[*].name contains ["Lorenza" , "Nona","Elisabeth"]
+    #verify gender
+  * def allGender = $.content[*].gender
+    And match each allGender == "Female"
+     # verify names contains a
+    And match each karate.lowerCase(allNames ) contains "a"
