@@ -9,8 +9,8 @@ Feature: Spartan Rest API: get spartan tests
     Given header Accept = "application/json"
     ##And query param gender is Female
     And params { gender: 'Female'}
-   # And query param nameContains is A
-    And params { nameContains: 'A'}
+   # And query param nameContains is A     #or a not matter
+    And params { nameContains: 'a'}
     #When I send get request to /spartans/search
     And path 'spartans/search'
     When method GET
